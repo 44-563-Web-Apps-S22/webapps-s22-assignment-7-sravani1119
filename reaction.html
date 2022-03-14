@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Timeout Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body style="margin-left: 10px; background-color: pink"></body>
+<body>
+
+    <h2>Sravani Nalla reaction timer</h2>
+
+    <p id="target">Your Time :</p>
+    <p id="countdown">Count :</p>
+
+    <button onclick="startTime()">Start Timer</button>
+    <button onclick="recordReact()">React Now</button>
+
+    <HR>
+    </HR>
+    <p>The page will Automatically reloads at the END </p>
+    <script>
+        let myTime = undefined
+        function recordReact() {
+            myTime = Date.now()
+
+            console.log(myTime);
+        }
+
+        function startTime() {
+            let count = Math.floor(Math.random() * 9); count = count + 2;
+            for (let i = 0; i < count; i++) {
+                setTimeout(() => {
+                    document.getElementById('countdown').innerHTML = "Count : " + i;
+                }, 1000 * (count - i))
+            }
+
+            setTimeout(() => {
+
+                if (myTime === undefined) {
+                    document.getElementById('target').innerHTML = "Your Time : Too slow"
+
+                    setTimeout(() => {
+                        location.reload()
+                    }, 2000)
+                }
+                else {
+                    let buttonTime = Date.now()
+                    document.getElementById('target').innerHTML = "Time was :" + (buttonTime - myTime)
+                    setTimeout(() => {
+                        location.reload()
+                    }, 2000)
+
+                }
+            }, count * 1000)
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
