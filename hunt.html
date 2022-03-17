@@ -14,7 +14,7 @@
     <body style="background-color: rgb(189, 135, 151);">
         <h2> Bird Hunt by Sravani Nalla</h2>
         <p> Click on the squares to search for a bird</p>
-        <p id="shakes"> Number of shakes of zero</p>
+        <p id="shakes"> Number of shakes :0</p>
         <p id="score"> Location score is unknown </p> 
        
         
@@ -98,7 +98,7 @@
                 if(id!=birdLocation){        document.getElementById(id).src="images/nest.jpg";
                 }
                 else
-                {        document.getElementById(id).src="images/PygmyTyrant.jpg";
+                {        document.getElementById(id).src="images/nightingale.jpg";
                 }
                 document.getElementById('shakes').innerHTML="Number of shakes : "+shakeCount;
                 document.getElementById('score').innerHTML="Location score : "+locationScore(position,birdLocation)
