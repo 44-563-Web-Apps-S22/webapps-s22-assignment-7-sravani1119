@@ -24,7 +24,7 @@
 
     <HR>
     </HR>
-    <p>The page will Automatically reloads at the END </p>
+    
     <script>
         let myTime = undefined
         function recordReact() {
@@ -35,7 +35,7 @@
 
         function startTime() {
             let count = Math.floor(Math.random() * 9); count = count + 2;
-            for (let i = 0; i < count; i++) {
+            for (let i = 0; i <=count; i++) {
                 setTimeout(() => {
                     document.getElementById('countdown').innerHTML = "Count : " + i;
                 }, 1000 * (count - i))
@@ -46,16 +46,12 @@
                 if (myTime === undefined) {
                     document.getElementById('target').innerHTML = "Your Time : Too slow"
 
-                    setTimeout(() => {
-                        location.reload()
-                    }, 2000)
+                   
                 }
                 else {
                     let buttonTime = Date.now()
                     document.getElementById('target').innerHTML = "Time was :" + (buttonTime - myTime)
-                    setTimeout(() => {
-                        location.reload()
-                    }, 2000)
+                    
 
                 }
             }, count * 1000)

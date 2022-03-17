@@ -1,125 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <title> Bird Hunt </title>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" 
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" 
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    </head>
+    <body style="background-color: rgb(189, 135, 151);">
+        <h2> Bird Hunt by Sravani Nalla</h2>
+        <p> Click on the squares to search for a bird</p>
+        <p id="shakes"> Number of shakes of zero</p>
+        <p id="score"> Location score is unknown </p> 
+       
+        
+        
+       <div style="margin-left: 20px;">
+            <div class="row">
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "0" onclick="check(0)"  alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "1" onclick="check(1)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "2" onclick="check(2)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "3" onclick="check(3)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "4" onclick="check(4)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "5" onclick="check(5)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "6" onclick="check(6)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "7" onclick="check(7)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "8" onclick="check(8)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "9" onclick="check(9)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "10" onclick="check(10)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "11" onclick="check(11)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "12" onclick="check(12)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "13" onclick="check(13)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "14" onclick="check(14)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "15" onclick="check(15)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "16" onclick="check(16)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "17" onclick="check(17)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "18" onclick="check(18)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "19" onclick="check(19)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "20" onclick="check(20)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "21" onclick="check(21)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "22" onclick="check(22)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "23" onclick="check(23)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+                <div class="col-sm-1"><img src="images/plant.jpg" id = "24" onclick="check(24)" alt="plant" style="width: 100%;height: 100%; padding-bottom: 5%;">
+                </div>
+            </div>
+        </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-        crossorigin="anonymous"></script>
-    <title>Bird Hunt</title>
-    <link rel="icon" href="images/bird.jpg" type="image/x-icon">
-    <style>
-
-    </style>
-
-</head>
-
-<body style="margin-left: 10px; background-color: rgb(189, 135, 151);">
-    <h2>Bird Hunt by Sravani Nalla</h2>
-    <p class="lead">Click on the squares to search for a bird.</p>
-    <p class="shakes" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Number of shakes
-        is zero.</p>
-    <p class="score" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Location score is
-        unknown.</p>
-    <hr>
-    <div class="image-grid d-flex flex-column justify-content-center align-items-center"></div>
-    <div class="row">
-        <div class="col-sm-1"><img src="images/plant.jpg" id="0" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/plant.jpg" id="1" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/plant.jpg" id="2" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/plant.jpg" id="3" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/plant.jpg" id="4" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-
-    </div>
-    <div class="row">
-        <div class="col-sm-1"><img src="images/plant.jpg" id="5" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/plant.jpg" id="6" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/plant.jpg" id="7" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/plant.jpg" id="8" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/plant.jpg" id="9" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-
-    </div>
-    <div class="row">
-        <div class="col-sm-1"><img src="images/plant.jpg" id="10" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/plant.jpg" id="11" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/plant.jpg" id="12" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/plant.jpg" id="13" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/plant.jpg" id="14" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-
-    </div>
-    <div class="row">
-        <div class="col-sm-1"><img src="images/plant.jpg" id="15" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/plant.jpg" id="16" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/plant.jpg" id="17" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/plant.jpg" id="18" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/plant.jpg" id="19" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-    </div>
-    <div class="row">
-        <div class="col-sm-1"><img src="images/plant.jpg" id="20" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/plant.jpg" id="21" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/plant.jpg" id="22" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/plant.jpg" id="23" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/plant.jpg" id="24" alt="image"
-                style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-
-    </div>
+        <button onclick="rel()">New Game</button>
+        <script>
 
 
-    <script>
-
-
-        let ids = ["0", "1", "2", "3", "4", "5", "6",
-            "7", "8", "9", "10", "11", "12", "13", "14",
-            "15", "16", "17", "18", "19", "20", "21", "22",
-            "23", "24"];
-
-        let shakeCount = 0, birdLocation = Math.floor(Math.random() * 25), score
-
-        function check(position) {
-            shakeCount++; let id = ids[position];
-            if (id != birdLocation) {
-                document.getElementById(id).src = "images/nest.jpg";
+            let ids=["0","1","2","3","4","5","6",
+            "7","8","9","10","11","12","13","14",
+            "15","16","17","18","19","20","21","22",
+            "23","24"];
+            
+            let shakeCount=0, birdLocation=Math.floor(Math.random() * 25),score
+            
+            function check(position){
+                shakeCount++; let id=ids[position];
+                if(id!=birdLocation){        document.getElementById(id).src="images/nest.jpg";
+                }
+                else
+                {        document.getElementById(id).src="images/PygmyTyrant.jpg";
+                }
+                document.getElementById('shakes').innerHTML="Number of shakes : "+shakeCount;
+                document.getElementById('score').innerHTML="Location score : "+locationScore(position,birdLocation)
             }
-            else {
-                document.getElementById(id).src = "images/nightingale.jpg";
+            
+            
+            function locationScore(pos1,pos2){ 
+              score=0
+              let diff=pos1-pos2
+              //to check column
+               if(pos1%5===pos2%5){
+                  score=1;}
+               //tocheck row
+               if(pos1<pos2){      
+                  let rem=Math.floor(pos2/5)
+                  for (let i = 0; i <5; i++) {
+                     if((rem*5+i)===pos1){
+                    score=1;}}}
+                else if (pos1>pos2){        
+                    let rem=Math.floor(pos1/5)
+                  for (let i = 0; i <5; i++) {
+                     if((rem*5+i)===pos2){
+                    score=1;}}}
+            //to check diag
+            if(diff==6 || diff==-6 || diff==4 || diff==-4){
+                score=1;   
+            } return score}
+            
+            
+            function rel(){
+                location.reload()
             }
-            document.getElementById('shakes').innerHTML = "Number of shakes : " + shakeCount;
-            document.getElementById('score').innerHTML = "Location score : " + locationScore(position, birdLocation)
-        }
-    </script>
-</body>
-
-</html>
+            
+                </script>
+            
+        
+        
+    </body>
+    </html>
